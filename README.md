@@ -31,9 +31,8 @@ jolly = {
     offDutyPay = false,
     grades = {
         ['0'] = { name = 'Trainee', payment = 50 },
-        ['1'] = { name = 'Busser', payment = 75 },
-        ['2'] = { name = 'Shift Leader', payment = 100 },
-        ['3'] = { name = 'Manager', isboss = true, payment = 600 },
+        ['1'] = { name = 'Bud Tender', payment = 75 },
+        ['2'] = { name = 'Cashier', payment = 100 },
         ['4'] = { name = 'Manager', isboss = true, payment = 150 },
     },
 },
