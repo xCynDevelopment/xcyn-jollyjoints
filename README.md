@@ -3,8 +3,8 @@
 ## Dependencies
 
 - `qb-target`
-- `qb-inventory` (Note: I use `tgiann-inventory` but it uses the same `HasItem` function)
-- See `config jim-payments`
+- `qb-inventory` (Note: I use `tgiann-inventory` but it uses the same `HasItem` function) See `config`
+- `jim-payments`
 
 ## Add to `qb-core/shared/items.lua`
 
