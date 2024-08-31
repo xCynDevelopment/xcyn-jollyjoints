@@ -27,14 +27,14 @@ Add to qb-core/shared/jobs.lua
 
 
 jolly = {
-		label = 'Jolly Joints',
-		defaultDuty = false,
-		offDutyPay = false,
-		grades = {
-			['0'] = { name = 'Trainee', payment = 50 },
-			['1'] = { name = 'Busser', payment = 75 },
-			['2'] = { name = 'Shift Leader', payment = 100 },
-			['3'] = { name = 'Manager', isboss = true, payment = 600 },
-			['4'] = { name = 'Manager', isboss = true, payment = 150 },
-		},
+        label = 'Jolly Joints',
+	defaultDuty = false,
+	offDutyPay = false,
+	grades = {
+		['0'] = { name = 'Trainee', payment = 50 },
+		['1'] = { name = 'Busser', payment = 75 },
+		['2'] = { name = 'Shift Leader', payment = 100 },
+		['3'] = { name = 'Manager', isboss = true, payment = 600 },
+		['4'] = { name = 'Manager', isboss = true, payment = 150 },
 	},
+},
