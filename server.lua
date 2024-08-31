@@ -1,6 +1,78 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 
+
+
+RegisterServerEvent('xcyn:largeenergy', function(src)
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)  
+   
+    Player.Functions.AddItem("jollyenergy", 1)
+    Player.Functions.RemoveItem("sugar", 1)
+    Player.Functions.RemoveItem("dankflavor", 1)
+    Player.Functions.RemoveItem("emptycanlarge", 1)
+    Player.Functions.RemoveItem("jollygreenextract", 2)
+    Player.Functions.RemoveItem("water", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollyenergy'], "add", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['sugar'], "remove", 1)	
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollygreenextract'], "remove", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['water'], "remove", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['dankflavor'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['emptycanlarge'], "remove", 1)
+end)
+
+RegisterServerEvent('xcyn:sflargeenergy', function(src)
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)  
+   
+    Player.Functions.AddItem("jollyenergysf", 1)
+    Player.Functions.RemoveItem("dankflavor", 1)
+    Player.Functions.RemoveItem("emptycanlarge", 1)
+    Player.Functions.RemoveItem("jollygreenextract", 2)
+    Player.Functions.RemoveItem("water", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollyenergysf'], "add", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollygreenextract'], "remove", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['dankflavor'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['emptycanlarge'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['water'], "remove", 2)
+end)
+
+
+RegisterServerEvent('xcyn:jollyjuiceserver', function(src)
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)  
+   
+    Player.Functions.AddItem("jollyjuice", 1)
+    Player.Functions.RemoveItem("dankflavor", 1)
+    Player.Functions.RemoveItem("emptycan", 1)
+    Player.Functions.RemoveItem("jollygreenextract", 2)
+    Player.Functions.RemoveItem("water", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollyjuice'], "add", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollygreenextract'], "remove", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['dankflavor'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['emptycan'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['water'], "remove", 1)
+end)
+
+RegisterServerEvent('xcyn:cbddrink', function(src)
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)  
+   
+    Player.Functions.AddItem("jollyenergycbd", 1)
+    Player.Functions.RemoveItem("dankflavor", 1)
+    Player.Functions.RemoveItem("emptycanlarge", 1)
+    Player.Functions.RemoveItem("jollygreencbdextract", 2)
+    Player.Functions.RemoveItem("water", 2)
+    Player.Functions.RemoveItem("sugar", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollyenergysf'], "add", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['sugar'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollygreencbdextract'], "remove", 2)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['dankflavor'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['emptycanlarge'], "remove", 1)
+    TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['water'], "remove", 2)
+end)
+
+
 RegisterServerEvent('xcyn:harvestloot', function(src)
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
@@ -15,6 +87,7 @@ RegisterServerEvent('xcyn:harvestloot', function(src)
     end
     TriggerClientEvent('qb-inventory:client:ItemBox', src, QBCore.Shared.Items['jollygreen'], "add", amount)	
 end)
+
 
 RegisterServerEvent('xcyn:giveextract', function(src)
     local src = source
