@@ -3,7 +3,7 @@
 ## Dependencies
 
 - `qb-target`
--  I use `tgiann-inventory` but it uses the same `HasItem`, `AddItem` and `RemoveItem` functions as QBCore See `config`
+-  I use `tgiann-inventory` but it uses the same `HasItem`, `AddItem` and `RemoveItem` functions as `QBCore`
 - `jim-payments`
 
 ## Add to `qb-core/shared/items.lua`
