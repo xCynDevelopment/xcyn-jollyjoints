@@ -4,8 +4,12 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 ------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------
---------------------------------------Functions------------------------------------------------
+--------------------------------------Functions-------------------------------------------------
 ------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------
+---------------------------------------Drinks---------------------------------------------------
 ------------------------------------------------------------------------------------------------
 local function makethcenergy()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -21,9 +25,6 @@ local function makethcenergy()
         QBCore.Functions.Notify('You do not work here')
     end
 end
-
-
-
 local function makejollyjuice()
     local PlayerData = QBCore.Functions.GetPlayerData()
     if PlayerData.job.name == "jolly" then
@@ -38,8 +39,6 @@ local function makejollyjuice()
         QBCore.Functions.Notify('You do not work here')
     end
 end
-
-
 local function makecbdthcenergy()
     local PlayerData = QBCore.Functions.GetPlayerData()
     if PlayerData.job.name == "jolly" then
@@ -54,8 +53,6 @@ local function makecbdthcenergy()
         QBCore.Functions.Notify('You do not work here')
     end
 end
-
-
 local function makesfthcenergy()
     local PlayerData = QBCore.Functions.GetPlayerData()
     if PlayerData.job.name == "jolly" then
@@ -70,8 +67,189 @@ local function makesfthcenergy()
         QBCore.Functions.Notify('You do not work here')
     end
 end
-
-
+------------------------------------------------------------------------------------------------
+---------------------------------------Gummies--------------------------------------------------
+------------------------------------------------------------------------------------------------
+local function makeappleblueberry()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        local hasIngredients = exports[Config.Inventory]:HasItem({"jollygreenextract", "sugar", "water", "dankflavor" }, 2)
+        if hasIngredients then
+            TriggerEvent('xcyn:appleblueberry')
+        else
+            QBCore.Functions.Notify("You dont have everything")
+        end
+    else
+        QBCore.Functions.Notify('You do not work here')
+    end
+end
+local function makeberryblast()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        local hasIngredients = exports[Config.Inventory]:HasItem({"jollygreenextract", "sugar", "water", "dankflavor" }, 2)
+        if hasIngredients then
+            TriggerEvent('xcyn:berryblast')
+        else
+            QBCore.Functions.Notify("You dont have everything")
+        end
+    else
+        QBCore.Functions.Notify('You do not work here')
+    end
+end
+local function makeraspberrydream()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        local hasIngredients = exports[Config.Inventory]:HasItem({"jollygreenextract", "sugar", "water", "dankflavor" }, 2)
+        if hasIngredients then
+            TriggerEvent('xcyn:raspberrydream')
+        else
+            QBCore.Functions.Notify("You dont have everything")
+        end
+    else
+        QBCore.Functions.Notify('You do not work here')
+    end
+end
+local function makespikedkiwi()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        local hasIngredients = exports[Config.Inventory]:HasItem({"jollygreenextract", "sugar", "water", "dankflavor" }, 2)
+        if hasIngredients then
+            TriggerEvent('xcyn:spikedkiwi')
+        else
+            QBCore.Functions.Notify("You dont have everything")
+        end
+    else
+        QBCore.Functions.Notify('You do not work here')
+    end
+end
+local function maketropicalstorm()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        local hasIngredients = exports[Config.Inventory]:HasItem({"jollygreenextract", "sugar", "water", "dankflavor" }, 2)
+        if hasIngredients then
+            TriggerEvent('xcyn:tropicalstorm')
+        else
+            QBCore.Functions.Notify("You dont have everything")
+        end
+    else
+        QBCore.Functions.Notify('You do not work here')
+    end
+end
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+--------------------------------------Events-------------------------------------------------
+------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------
+RegisterNetEvent('xcyn:appleblueberry')
+AddEventHandler('xcyn:appleblueberry', function()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        QBCore.Functions.Progressbar("eat_something", ("Making Apple Berry Gummy"), 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missmechanic", 
+            anim = "work2_base", 
+            flags = 3,
+        }, {}, {}, function()
+            StopAnimTask(Ped, "missmechanic", "work2_base", 1.0)
+            ClearPedTasks(Ped)
+            TriggerServerEvent("xcyn:appleblueberry")
+        end)
+    else
+        QBCore.Functions.Notify("You dont work here", "error")
+    end
+end)
+RegisterNetEvent('xcyn:tropicalstorm')
+AddEventHandler('xcyn:tropicalstorm', function()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        QBCore.Functions.Progressbar("eat_something", ("Making Apple Berry Gummy"), 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missmechanic", 
+            anim = "work2_base", 
+            flags = 3,
+        }, {}, {}, function()
+            StopAnimTask(Ped, "missmechanic", "work2_base", 1.0)
+            ClearPedTasks(Ped)
+            TriggerServerEvent("xcyn:tropicalstorm")
+        end)
+    else
+        QBCore.Functions.Notify("You dont work here", "error")
+    end
+end)
+RegisterNetEvent('xcyn:spikedkiwi')
+AddEventHandler('xcyn:spikedkiwi', function()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        QBCore.Functions.Progressbar("eat_something", ("Making Spiked Kiwi Gummy"), 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missmechanic", 
+            anim = "work2_base", 
+            flags = 3,
+        }, {}, {}, function()
+            StopAnimTask(Ped, "missmechanic", "work2_base", 1.0)
+            ClearPedTasks(Ped)
+            TriggerServerEvent("xcyn:spikedkiwi")
+        end)
+    else
+        QBCore.Functions.Notify("You dont work here", "error")
+    end
+end)
+RegisterNetEvent('xcyn:raspberrydream')
+AddEventHandler('xcyn:raspberrydream', function()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        QBCore.Functions.Progressbar("eat_something", ("Making Raspberry Dream Gummy"), 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missmechanic", 
+            anim = "work2_base", 
+            flags = 3,
+        }, {}, {}, function()
+            StopAnimTask(Ped, "missmechanic", "work2_base", 1.0)
+            ClearPedTasks(Ped)
+            TriggerServerEvent("xcyn:raspberrydream")
+        end)
+    else
+        QBCore.Functions.Notify("You dont work here", "error")
+    end
+end)
+RegisterNetEvent('xcyn:berryblast')
+AddEventHandler('xcyn:berryblast', function()
+    local PlayerData = QBCore.Functions.GetPlayerData()
+    if PlayerData.job.name == "jolly" then
+        QBCore.Functions.Progressbar("eat_something", ("Making Berry Blast Gummy"), 2000, false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = "missmechanic", 
+            anim = "work2_base", 
+            flags = 3,
+        }, {}, {}, function()
+            StopAnimTask(Ped, "missmechanic", "work2_base", 1.0)
+            ClearPedTasks(Ped)
+            TriggerServerEvent("xcyn:berryblast")
+        end)
+    else
+        QBCore.Functions.Notify("You dont work here", "error")
+    end
+end)
 RegisterNetEvent('xcyn:largeenergyanim')
 AddEventHandler('xcyn:largeenergyanim', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -94,7 +272,6 @@ AddEventHandler('xcyn:largeenergyanim', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
 RegisterNetEvent('xcyn:sflargeenergyanim')
 AddEventHandler('xcyn:sflargeenergyanim', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -117,7 +294,6 @@ AddEventHandler('xcyn:sflargeenergyanim', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
 RegisterNetEvent('xcyn:cbddrink')
 AddEventHandler('xcyn:cbddrink', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -140,8 +316,6 @@ AddEventHandler('xcyn:cbddrink', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
-
 RegisterNetEvent('xcyn:jollyjuice')
 AddEventHandler('xcyn:jollyjuice', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -164,7 +338,6 @@ AddEventHandler('xcyn:jollyjuice', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
 RegisterNetEvent('xcyn:jolly:harvest')
 AddEventHandler('xcyn:jolly:harvest', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -187,8 +360,6 @@ AddEventHandler('xcyn:jolly:harvest', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
-
 RegisterNetEvent('xcyn:jolly:condition')
 AddEventHandler('xcyn:jolly:condition', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -218,8 +389,6 @@ AddEventHandler('xcyn:jolly:condition', function()
         QBCore.Functions.Notify("You dont work here", "error")
     end
 end)
-
-
 RegisterNetEvent('xcyn:jolly:market')
 AddEventHandler('xcyn:jolly:market', function()
     local PlayerData = QBCore.Functions.GetPlayerData()
@@ -254,11 +423,11 @@ local function gummymenu()
         title = 'Gummy Infusion',
         options = {
             {
-                title = 'Apple Blueberry',
+                title = 'Apple Berry',
                 description = 'Required: (2x)Sugar (2x)Extract (2x)Water (2x)Dank Flavor',
                 icon = '',
                 onSelect = function()
-                    
+                    makeappleblueberry()
                 end
             },
             {
@@ -266,7 +435,7 @@ local function gummymenu()
                 description = 'Required: (2x)Sugar (2x)Extract (2x)Water (2x)Dank Flavor',
                 icon = '',
                 onSelect = function()
-                    
+                    makeberryblast()
                 end
             },
             {
@@ -274,7 +443,7 @@ local function gummymenu()
                 description = 'Required: (2x)Sugar, (2x)Extract, (2x)Water, (2x)Dank Flavor',
                 icon = '',
                 onSelect = function()
-                    
+                    makeraspberrydream()
                 end
             },
             {
@@ -282,7 +451,7 @@ local function gummymenu()
                 description = 'Required: (2x)Sugar, (2x)Extract, (2x)Water, (2x)Dank Flavor',
                 icon = '',
                 onSelect = function()
-                    
+                    makespikedkiwi()
                 end
             },
             {
@@ -290,7 +459,7 @@ local function gummymenu()
                 description = 'Required: (2x)Sugar, (2x)Extract, (2x)Water, (2x)Dank Flavor',
                 icon = '',
                 onSelect = function()
-                    
+                    maketropicalstorm()
                 end
             },
         },
