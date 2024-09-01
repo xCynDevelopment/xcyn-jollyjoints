@@ -3,7 +3,7 @@
 ## Dependencies
 
 - `qb-target`
--  I use `tgiann-inventory` but it uses the same `HasItem`, `AddItem` and `RemoveItem` functions as `QBCore`
+-  I use `tgiann-inventory` but it uses the same `HasItem`, `AddItem` and `RemoveItem` functions as `QBCore` Just configure the exports/add/remove/has item to whatever inventory you use
 - `jim-payments`
 
 ## Add to `qb-core/shared/items.lua`
