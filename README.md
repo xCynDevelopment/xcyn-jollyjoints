@@ -22,6 +22,12 @@ jollyenergysf = { name = 'jollyenergysf', label = 'Sugar Free Jolly Energy', wei
 jollyenergycbd = { name = 'jollyenergycbd', label = 'Jolly Energy CBD', weight = 500, type = 'item', image = 'jollyenergycbd.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Energy Drink that gets you HIGH, But not Diabetes' },
 jollygreencbdextract = { name = 'jollygreencbdextract', label = 'Jolly Green CBD Extract', weight = 500, type = 'item', image = 'jollygreenextract.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank CBD Extract' },
 jollyjuice = { name = 'jollyjuice', label = 'Jolly Pop THC', weight = 500, type = 'item', image = 'jollyjuice.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank THC Pop' },
+abgummy = { name = 'abgummy', label = 'Apple Berry Gummy', weight = 500, type = 'item', image = 'abgummy.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Gummy' },
+bbgummy = { name = 'bbgummy', label = 'Berry Blast Gummy', weight = 500, type = 'item', image = 'bbgummy.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Gummy' },
+rdgummy = { name = 'rdgummy', label = 'Raspberry Dream Gummy', weight = 500, type = 'item', image = 'rdgummy.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Gummy' },
+skgummy = { name = 'skgummy', label = 'Spiked Kiwi Gummy', weight = 500, type = 'item', image = 'skgummy.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Gummy' },
+tsgummy = { name = 'tsgummy', label = 'Tropical Storm Gummy', weight = 500, type = 'item', image = 'tsgummy.webp', unique = false, useable = true, shouldClose = true, combinable = nil, description = 'Very Dank Gummy' },
+
 ```
 ## Add to `qb-core/shared/jobs.lua`
 ```lua
